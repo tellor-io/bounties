@@ -1,0 +1,43 @@
+{
+    "hacks": [
+        {
+            "hacks": "Opium Implementation",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Replace centralized Oracles on Opium",
+            "skills": "Solidity",
+            "id": 2
+        },
+        {
+            "hacks": "Aave – implementation",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Implement Tellor Oracle in Aave",
+            "skills": "Solidity",
+            "id": 3
+        },
+        {
+            "hacks": "Launch Tellor ACS on an alternate chain",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Test out tellor somewhere else...",
+            "skills": "Solidity",
+            "id": 4
+        },
+        {
+            "hacks": "Launch a derivatives project using Tellor",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Create a derivatives project utilizing Tellor",
+            "id": 5
+        },
+        {
+            "hacks": "Tellor one click vote",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Super simple app to vote on Tellor ID's (big yes or no button for a given ID)",
+            "skills": "React",
+            "id": 6
+        }
+    ]
+}

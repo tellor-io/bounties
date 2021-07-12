@@ -1,0 +1,50 @@
+{
+    "content": [
+        {
+            "content": "Implementing Tellor 101",
+            "tributes": 400,
+            "available": "yes",
+            "description": "Tutorial article for Medium on how to implement Tellor in your smart contract",
+            "skills": "Writing",
+            "id": 2
+        },
+        {
+            "content": "Impleting Tellor Video",
+            "tributes": 375,
+            "available": "yes",
+            "description": "Video tutorial on how to implement Tellor in your smart contract",
+            "skills": "Video",
+            "id": 3
+        },
+        {
+            "content": "How to mine (on the pool) Video",
+            "tributes": 150,
+            "available": "yes",
+            "description": "Video tutorial on how to mine Tellor on the pool (no 1000 needed)",
+            "skills": "Video",
+            "id": 4
+        },
+        {
+            "content": "Tellor How-it-works one pager",
+            "tributes": 200,
+            "available": "yes",
+            "description": "One pager on how Tellor works with graphics",
+            "skills": "Writing/Design",
+            "id": 5
+        },
+        {
+            "content": "Podcasts",
+            "tributes": 100,
+            "available": "yes",
+            "description": "Get Tellor on a well known podcast",
+            "id": 6
+        },
+        {
+            "content": "Custom articles",
+            "tributes": "various",
+            "available": "yes",
+            "description": "Get an article written on Tellor (or write one yourself and publish it!)",
+            "id": 7
+        }
+    ]
+}

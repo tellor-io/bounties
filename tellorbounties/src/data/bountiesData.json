@@ -1,0 +1,249 @@
+{
+    "bounties": [
+        {
+            "bountiesTitle": "Tellor Bounties Available",
+            "tributes": 29475,
+            "available": "USD (paid in TRB at time of completion)",
+            "id": 2
+        },
+        {
+            "id": 3
+        },
+        {
+            "bountiesTitle": "Builds",
+            "tributes": "",
+            "available": "Available",
+            "description": "Description",
+            "skills": "Skills",
+            "notes": "Notes",
+            "id": 4
+        },
+        {
+            "bountiesTitle": "Tellor Miner upgrades",
+            "id": 5
+        },
+        {
+            "bountiesTitle": "Improved Golang database testing",
+            "tributes": 1000,
+            "available": "no",
+            "description": "Further testing for edge cases in returned API values",
+            "id": 6
+        },
+        {
+            "bountiesTitle": "Misc Miner issues",
+            "tributes": 3000,
+            "available": "yes",
+            "description": "work on Tellor miner issues (flexible amount)",
+            "skills": "golang",
+            "notes": "https://github.com/tellor-io/TellorMiner",
+            "id": 7
+        },
+        {
+            "bountiesTitle": "Tellor Miner Documentation",
+            "tributes": 250,
+            "available": "yes",
+            "description": "Work on Tellor miner documentation (read thedocs)",
+            "id": 8
+        },
+        {
+            "bountiesTitle": "Tellor Advanced Dispute center",
+            "tributes": 2500,
+            "available": "yes",
+            "description": "Create an advanced viewer for Tellor disputes (hosted database showing Tellor Miner disputeChecker)",
+            "skills": "golang, leveldb",
+            "id": 9
+        },
+        {
+            "bountiesTitle": "Add Option for ChiGas token",
+            "tributes": 1250,
+            "available": "yes",
+            "description": "for submit and addTip functions",
+            "id": 10
+        },
+        {
+            "bountiesTitle": "dune analytics expansion",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Add more features to the Tellor dune analytics page",
+            "skills": "sql",
+            "id": 11
+        },
+        {
+            "bountiesTitle": "Tellor voting notifications and information",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Automate a way to suscribe to Tellor voting events with informaton on the event",
+            "id": 12
+        },
+        {
+            "id": 13
+        },
+        {
+            "bountiesTitle": "Hacks",
+            "id": 14
+        },
+        {
+            "bountiesTitle": "Opium Implementation",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Replace centralized Oracles on Opium",
+            "skills": "Solidity",
+            "id": 15
+        },
+        {
+            "bountiesTitle": "Aave – implementation",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Implement Tellor Oracle in Aave",
+            "skills": "Solidity",
+            "id": 16
+        },
+        {
+            "bountiesTitle": "Launch Tellor ACS on an alternate chain",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Test out tellor somewhere else...",
+            "skills": "Solidity",
+            "id": 17
+        },
+        {
+            "bountiesTitle": "Launch a derivatives project using Tellor",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Create a derivatives project utilizing Tellor",
+            "id": 18
+        },
+        {
+            "bountiesTitle": "Tellor one click vote",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Super simple app to vote on Tellor ID's (big yes or no button for a given ID)",
+            "skills": "react",
+            "id": 19
+        },
+        {
+            "id": 20
+        },
+        {
+            "bountiesTitle": "Deeper Research",
+            "id": 21
+        },
+        {
+            "bountiesTitle": "Tellor P2P gossip network",
+            "tributes": 3250,
+            "available": "yes",
+            "description": "Create a Tellor P2P implementation for gossiping the miner database",
+            "skills": "Golang",
+            "notes": "https://github.com/ssbc",
+            "id": 22
+        },
+        {
+            "bountiesTitle": "Gas usage research",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Analyze Tellor smart contracts and implement gas savings",
+            "skills": "Solidity",
+            "id": 23
+        },
+        {
+            "bountiesTitle": "Chains – Near",
+            "tributes": 2000,
+            "available": "yes",
+            "description": "Implement ACS on Near Protocol",
+            "id": 24
+        },
+        {
+            "bountiesTitle": "Chains - Elrond",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Implement ACS on Elrond Protocol",
+            "id": 25
+        },
+        {
+            "bountiesTitle": "Chains - Celo",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Implement ACS on Celo",
+            "id": 26
+        },
+        {
+            "bountiesTitle": "Tellor Oracle on xDai",
+            "tributes": 1500,
+            "available": "yes",
+            "description": "Allow xDai to read Tellor data",
+            "skills": "",
+            "notes": "https://docs.tokenbridge.net/eth-xdai-amb-bridge/about-the-eth-xdai-amb",
+            "id": 27
+        },
+        {
+            "bountiesTitle": "Cross-chain",
+            "tributes": 1000,
+            "available": "yes",
+            "description": "Use a bridge (preferably trustless) to put a Tellor token on another chain",
+            "id": 28
+        },
+        {
+            "id": 29
+        },
+        {
+            "bountiesTitle": "Content",
+            "id": 30
+        },
+        {
+            "bountiesTitle": "Implementing Tellor 101",
+            "tributes": 400,
+            "available": "yes",
+            "description": "Tutorial article for Medium on how to implement Tellor in your smart contract",
+            "skills": "Writing",
+            "id": 31
+        },
+        {
+            "bountiesTitle": "Impleting Tellor Video",
+            "tributes": 375,
+            "available": "yes",
+            "description": "Video tutorial on how to implement Tellor in your smart contract",
+            "skills": "Video",
+            "id": 32
+        },
+        {
+            "bountiesTitle": "How to mine (on the pool) Video",
+            "tributes": 150,
+            "available": "yes",
+            "description": "Video tutorial on how to mine Tellor on the pool (no 1000 needed)",
+            "skills": "Video",
+            "id": 33
+        },
+        {
+            "bountiesTitle": "Tellor How-it-works one pager",
+            "tributes": 200,
+            "available": "yes",
+            "description": "One pager on how Tellor works with graphics",
+            "skills": "Writing/Design",
+            "id": 34
+        },
+        {
+            "bountiesTitle": "Podcasts",
+            "tributes": 100,
+            "available": "yes",
+            "description": "Get Tellor on a well known podcast",
+            "id": 35
+        },
+        {
+            "bountiesTitle": "Custom articles",
+            "tributes": "various",
+            "available": "yes",
+            "description": "Get an article written on Tellor (or write one yourself and publish it!)",
+            "id": 36
+        },
+        {
+            "id": 37
+        },
+        {
+            "id": 38
+        },
+        {
+            "bountiesTitle": "Potential Hackathons",
+            "id": 39
+        }
+    ]
+}
