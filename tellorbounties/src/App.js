@@ -101,7 +101,7 @@ const App = () => {
       <div className="App__Container">
         <h1>Tellor Bounties</h1>
         <Welcome />
-        <hr />
+        {/* <hr />
         {tellorBountiesAvailableData &&
           tellorBountiesAvailableData.map((data) => {
             return (
@@ -175,7 +175,7 @@ const App = () => {
                 </div>
               </div>
             );
-          })}
+          })} */}
       </div>
       <Footer />
     </div>

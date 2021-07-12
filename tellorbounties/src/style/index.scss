@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap");
 @import "variables";
 
 $background: #fafafa;
@@ -148,18 +148,47 @@ h6 {
 }
 
 // Specific Elements
+
 // Joshua Samaniego
 // Styles for App.js
 .App__Container {
   @include centeredcolumn();
-  width: 90%;
+  width: 92%;
+  margin: 0 auto;
   margin-top: 2%;
 }
 
 //Styles for Welcome.js
-.Welcome__Icons {
-  width: 80px;
+.Welcome {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+.Welcome__Message {
+  margin: 0 auto;
+  padding: 20px;
+}
+.Welcome__Rows {
+  @include centeredrow();
+  padding-bottom: 2%;
+
+  img {
+    width: 80px;
+    flex: 0.05;
+  }
+  h3 {
+    font-weight: 600;
+    margin: 0% 3%;
+    flex: 0.1;
+  }
+  p {
+    @include fourteenpxfont();
+    font-weight: 300;
+    flex: 0.85;
+  }
+}
+
 .Header {
   @include centeredrow;
   box-sizing: border-box;
