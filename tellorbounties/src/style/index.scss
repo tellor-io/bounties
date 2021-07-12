@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import 'variables';
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import "variables";
 
-
-
-$background: #FAFAFA;
-$tellor-grey1: #F2F2F2;
-$tellor-grey2: #F0F0F0;
+$background: #fafafa;
+$tellor-grey1: #f2f2f2;
+$tellor-grey2: #f0f0f0;
 $darkestgrey: #555555;
-$tellor-green: #2DFC9F;
+$tellor-green: #2dfc9f;
 
 /* gradient mixins */
 @mixin greenshine {
   background: $tellor-green;
-  background: linear-gradient(90deg, #2DFC9F 0%, #00FB89 100%);
+  background: linear-gradient(90deg, #2dfc9f 0%, #00fb89 100%);
 }
 
 /* font mixins */
@@ -85,11 +83,10 @@ $tellor-green: #2DFC9F;
   align-items: flex-end;
 }
 
-
 body {
   background-color: $background;
   color: black;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -100,7 +97,6 @@ p {
   @include twelvepxfont;
 }
 
-h2,
 h3,
 h4 {
   font-weight: 100;
@@ -111,7 +107,9 @@ h1 {
   font-size: 1.75em;
   color: $darkestgrey;
 }
-
+h2 {
+  font-weight: 600;
+}
 h5 {
   font-size: 1em;
 }
@@ -150,6 +148,18 @@ h6 {
 }
 
 // Specific Elements
+// Joshua Samaniego
+// Styles for App.js
+.App__Container {
+  @include centeredcolumn();
+  width: 90%;
+  margin-top: 2%;
+}
+
+//Styles for Welcome.js
+.Welcome__Icons {
+  width: 80px;
+}
 .Header {
   @include centeredrow;
   box-sizing: border-box;
@@ -186,7 +196,6 @@ h6 {
         svg {
           width: 143px;
         }
-
       }
     }
   }
@@ -267,7 +276,6 @@ h6 {
       font-weight: normal;
       width: 100%;
       padding: 0 !important;
-      ;
       height: 45px;
       border-radius: 0px !important;
       margin: 0;
@@ -277,7 +285,7 @@ h6 {
 
 .HeaderDropdown {
   margin: 5px 0 0 0 !important;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   box-sizing: border-box;
   padding: 20px;
   border: 1px solid $darkestgrey;
@@ -342,7 +350,6 @@ h6 {
         width: 100%;
       }
     }
-
   }
 }
 
@@ -402,7 +409,6 @@ h6 {
       }
     }
   }
-
 }
 
 .CurrentMiningVisual {
@@ -470,7 +476,6 @@ h6 {
         text-align: center;
         position: static;
         margin: 0 0 8px 0;
-
       }
 
       @media (max-width: 600px) {
@@ -622,8 +627,6 @@ h6 {
     }
   }
 
-
-
   &_third {
     width: 140px;
     height: 154px;
@@ -651,7 +654,6 @@ h6 {
       position: static;
     }
   }
-
 
   &_fourth {
     width: 180px;
@@ -773,7 +775,6 @@ h6 {
   }
 }
 
-
 .AllMining {
   width: 100%;
 
@@ -862,7 +863,6 @@ h6 {
 
             p:nth-child(2) {
               width: 160px;
-
             }
           }
 
@@ -870,7 +870,6 @@ h6 {
             @include fourteenpxfont;
             color: $darkestgrey;
             text-decoration: none;
-
           }
 
           a {
@@ -966,15 +965,12 @@ h6 {
 
                 @media (max-width: 600px) {
                   margin: 0 8% 0 0;
-
                 }
               }
             }
           }
         }
       }
-
-
 
       .ant-collapse {
         width: 100%;
@@ -1025,7 +1021,7 @@ h6 {
     }
 
     &:active {
-      transform: scale(0.995)
+      transform: scale(0.995);
     }
 
     &__Inner {
@@ -1034,7 +1030,7 @@ h6 {
       box-sizing: border-box;
       padding: 26px 0 22px 0;
 
-      >div:first-child {
+      > div:first-child {
         @include leftcolumn;
         margin: 0 25px 0 0;
         min-width: 20px;
@@ -1049,17 +1045,17 @@ h6 {
         }
       }
 
-      >div>p {
+      > div > p {
         margin: 0;
       }
 
-      >div>h4 {
+      > div > h4 {
         margin: 0;
         font-weight: bold;
         font-size: 1.125rem;
       }
 
-      >h2 {
+      > h2 {
         margin: 4px 0 0 0;
         font-size: 2rem;
         line-height: 2rem;
@@ -1081,7 +1077,7 @@ h6 {
   @include leftcolumn;
   box-sizing: border-box;
   padding: 35px 15px 15px 15px;
-  border: 2px solid #F0F0F0;
+  border: 2px solid #f0f0f0;
   margin: 0 0 40px 0;
   color: $darkestgrey;
 
@@ -1245,18 +1241,20 @@ h6 {
   width: 100%;
   margin: 10px 0 0 0;
 
-  .ant-collapse>.ant-collapse-item>.ant-collapse-header {
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header {
     color: $darkestgrey;
     font-weight: bold;
   }
 
   .vote_history {
-    .ant-collapse-content>.ant-collapse-content-box {
+    .ant-collapse-content > .ant-collapse-content-box {
       padding: 0 0 0 0;
-
     }
 
-    .ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow {
+    .ant-collapse
+      > .ant-collapse-item
+      > .ant-collapse-header
+      .ant-collapse-arrow {
       left: 0 !important;
     }
 
@@ -1264,12 +1262,11 @@ h6 {
       padding: 0;
       color: $darkestgrey;
     }
-
   }
 
   .ant-table {
     width: 100%;
-    background: #FAFAFA;
+    background: #fafafa;
 
     .ant-collapse-header {
       padding-left: 15px !important;
@@ -1307,7 +1304,6 @@ h6 {
       div {
         p {
           @include fourteenpxfont;
-
         }
 
         margin: 0 0 5px 0 !important;
@@ -1333,7 +1329,6 @@ h6 {
   //   padding:0;
   // }
 }
-
 
 .Detail {
   width: 100%;
@@ -1546,7 +1541,7 @@ h6 {
 
           .ant-table {
             width: 100%;
-            background: #FAFAFA;
+            background: #fafafa;
 
             .ant-table-row-expand-icon {
               color: $darkestgrey;
@@ -1564,7 +1559,6 @@ h6 {
             @include leftcolumn;
             box-sizing: border-box;
             padding: 0 0 0 5%;
-
           }
 
           &__Inner {
@@ -1598,7 +1592,6 @@ h6 {
               color: $darkestgrey;
               text-decoration: none;
               margin: 0 0 0 0;
-
             }
 
             a {
@@ -1694,7 +1687,6 @@ h6 {
 
                   @media (max-width: 600px) {
                     margin: 0 8% 0 0;
-
                   }
                 }
               }
@@ -1803,7 +1795,6 @@ h6 {
               max-width: 50px;
             }
           }
-
         }
 
         .disputeCollapser {
@@ -1880,9 +1871,8 @@ h6 {
 }
 
 .Footer {
-  width: 100%;
   @include leftrow;
-  background: url('../assets/bg_grey.png');
+  background: url("../assets/bg_grey.png");
   padding: 100px 10vw 140px 10vw;
 
   @media (max-width: 600px) {
@@ -1933,6 +1923,18 @@ h6 {
   }
 }
 
+/* Joshua Samaniego */
+.Left__Column {
+  svg:nth-child(1) {
+    width: 57px;
+    margin: 0 0 6px 0;
+  }
+  svg:nth-child(2) {
+    height: 55px;
+    margin: 6px 0 0 0;
+  }
+}
+
 .alertBox {
   @include leftrow;
   box-sizing: border-box;
@@ -1951,7 +1953,7 @@ h6 {
   @include centeredcolumn;
   box-sizing: border-box;
   padding: 45px 60px;
-  border: 2px solid #F0F0F0;
+  border: 2px solid #f0f0f0;
   margin: 0 0 40px 0;
 
   @media (max-width: 600px) {
@@ -2022,7 +2024,7 @@ h6 {
       div:nth-child(2) {
         height: 1px;
         flex: 1;
-        border-bottom: 1px solid #C7C7C7;
+        border-bottom: 1px solid #c7c7c7;
         margin: 0 10px 9px 10px;
       }
     }
@@ -2048,12 +2050,12 @@ h6 {
   }
 
   .ant-collapse,
-  .ant-collapse>.ant-collapse-item {
+  .ant-collapse > .ant-collapse-item {
     border: none;
     background: inherit;
   }
 
-  .ant-collapse-item:last-child>.ant-collapse-content {
+  .ant-collapse-item:last-child > .ant-collapse-content {
     border-radius: 0;
   }
 
@@ -2092,14 +2094,12 @@ h6 {
   }
 }
 
-
-
-// --- Miner graphic stuff --- 
+// --- Miner graphic stuff ---
 
 .loadercircle {
   stroke-miterlimit: 10;
   stroke-width: 2;
-  stroke: #D9D9D9;
+  stroke: #d9d9d9;
   stroke-dasharray: 250;
   stroke-dashoffset: -250;
   fill: none;
@@ -2109,7 +2109,7 @@ h6 {
 .minericon_line {
   stroke-miterlimit: 10;
   stroke-width: 1;
-  stroke: #D9D9D9;
+  stroke: #d9d9d9;
   fill: none;
 }
 
@@ -2125,7 +2125,7 @@ h6 {
 
 .minericon_box {
   stroke-width: 1;
-  stroke: #D9D9D9;
+  stroke: #d9d9d9;
   fill: none;
 }
 
@@ -2211,10 +2211,6 @@ h6 {
   }
 }
 
-
-
-
-
 // --- Ant Overrides ---
 
 // Header
@@ -2268,7 +2264,7 @@ button {
   }
 
   &:active {
-    transform: scale(0.995)
+    transform: scale(0.995);
   }
 }
 
@@ -2299,7 +2295,6 @@ button {
     color: $darkestgrey !important;
   }
 }
-
 
 // Dropdown Menu
 
@@ -2339,16 +2334,13 @@ button {
     background: none;
     border: none;
     border-radius: 50%;
-
   }
 
   &-item-active {
     background: none;
     border: 1px solid $tellor-green;
   }
-
 }
-
 
 .ant-pagination-item a {
   color: $darkestgrey;
@@ -2358,20 +2350,12 @@ button {
   }
 }
 
-
 .ant-pagination-prev .ant-pagination-item-link,
 .ant-pagination-next .ant-pagination-item-link {
   border: none;
   background: none;
   color: $darkestgrey;
-
 }
-
-
-
-
-
-
 
 // Migration specifics (by Bennisan)
 
@@ -2436,11 +2420,11 @@ button {
     max-width: 685px;
   }
 
-  .ant-collapse>.ant-collapse-item {
+  .ant-collapse > .ant-collapse-item {
     border: none;
   }
 
-  .ant-collapse>.ant-collapse-item>.ant-collapse-header {
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header {
     text-decoration: underline;
   }
 
@@ -2478,7 +2462,6 @@ button {
     margin: 30px 0 0 0;
   }
 
-
   .connected span {
     font-weight: bold;
     // color: white;
@@ -2491,7 +2474,6 @@ button {
     align-items: flex-end;
     margin: 25px 0 20px 0;
   }
-
 
   .Balance {
     display: flex;
@@ -2517,7 +2499,6 @@ button {
   .fullop {
     opacity: 1;
   }
-
 
   .Success {
     width: 100%;
@@ -2545,5 +2526,4 @@ button {
     cursor: pointer;
     color: var(--color-heading);
   }
-
 }
