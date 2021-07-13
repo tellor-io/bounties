@@ -207,12 +207,24 @@ h6 {
   }
 }
 
-//Styles for BuildsTable.js
-.Table__Container {
+//Styles for Table Components
+.Table__Container__Top {
+  @include leftcolumn();
+  padding: 2% 2% 0 2%;
+  border: 2px solid $tellor-grey2;
+  margin: 5% 0 2% 0;
+}
+.Table__Container__Middle {
   @include leftcolumn();
   padding: 2% 2% 0 2%;
   border: 2px solid $tellor-grey2;
   margin: 3% 0 2% 0;
+}
+.Table__Container__Bottom {
+  @include leftcolumn();
+  padding: 2% 2% 0 2%;
+  border: 2px solid $tellor-grey2;
+  margin: 3% 0 5% 0;
 }
 
 //Styles for Footer.js

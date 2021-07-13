@@ -49,7 +49,7 @@ function BuildsTable() {
   ];
 
   return (
-    <div className="Table__Container">
+    <div className="Table__Container__Top">
       <h1>Builds</h1>
       <h3>Click the {<PlusCircleOutlined />} for more information</h3>
       <Table

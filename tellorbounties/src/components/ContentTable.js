@@ -49,7 +49,7 @@ function ContentTable() {
   ];
 
   return (
-    <div className="Table__Container">
+    <div className="Table__Container__Bottom ">
       <h1>Content</h1>
       <h3>Click the {<PlusCircleOutlined />} for more information</h3>
       <Table
