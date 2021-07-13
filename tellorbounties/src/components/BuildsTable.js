@@ -21,15 +21,15 @@ function BuildsTable() {
 
   const dataHelper = (unformattedData) => {
     let data = [];
-    unformattedData.forEach((bdata) => {
+    unformattedData.forEach((bData) => {
       let obj = {
-        key: bdata.id,
-        builds: bdata.builds ? bdata.builds : null,
-        tributes: bdata.tributes ? bdata.tributes : null,
-        available: bdata.available ? bdata.available : null,
-        description: bdata.description ? bdata.description : null,
-        skills: bdata.skills ? bdata.skills : null,
-        notes: bdata.notes ? bdata.notes : null,
+        key: bData.id,
+        builds: bData.builds ? bData.builds : null,
+        tributes: bData.tributes ? bData.tributes : null,
+        available: bData.available ? bData.available : null,
+        description: bData.description ? bData.description : null,
+        skills: bData.skills ? bData.skills : null,
+        notes: bData.notes ? bData.notes : null,
       };
       data.push(obj);
     });
@@ -59,8 +59,7 @@ function BuildsTable() {
           expandedRowRender: (record) => (
             <>
               <p style={{ margin: 0 }}>
-                Build Description:{" "}
-                {record.description ? record.description : "N/A"}
+                Description: {record.description ? record.description : "N/A"}
               </p>
               <p style={{ margin: 0 }}>
                 Necessary Skill(s): {record.skills ? record.skills : "N/A"}

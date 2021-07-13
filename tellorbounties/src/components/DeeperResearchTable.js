@@ -1,43 +1,47 @@
 import React, { useState, useEffect } from "react";
 //Data imports
-import dataHacks from "../data/hacks.json";
+import dataDeeperResearch from "../data/deeperResearch.json";
 //Ant Design
 import { Button, Table } from "antd";
 import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
 
-function HacksTable() {
-  const [hacksData, setHacksData] = useState();
+function DeeperResearchTable() {
+  const [deeperResearchData, setDeeperResearchData] = useState();
 
   useEffect(() => {
     // Commented out for development phase
-    //   const hacksUrl = "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/hacks";
-    //   fetch(hacksUrl)
+    //   const deeperResearchUrl = "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/deeperResearch";
+    //   fetch(deeperResearchUrl)
     //     .then((response) => response.json())
     //     .then((result) => {
-    //       dataHelper(result.hacks);
+    //       dataHelper(result.deeperResearch);
     //     });
-    dataHelper(dataHacks.hacks);
+    dataHelper(dataDeeperResearch.deeperResearch);
   }, []);
 
   const dataHelper = (unformattedData) => {
     let data = [];
-    unformattedData.forEach((hData) => {
+    unformattedData.forEach((dRData) => {
       let obj = {
-        key: hData.id,
-        hacks: hData.hacks ? hData.hacks : null,
-        tributes: hData.tributes ? hData.tributes : null,
-        available: hData.available ? hData.available : null,
-        description: hData.description ? hData.description : null,
-        skills: hData.skills ? hData.skills : null,
-        notes: hData.notes ? hData.notes : null,
+        key: dRData.id,
+        builds: dRData.deeperResearch ? dRData.deeperResearch : null,
+        tributes: dRData.tributes ? dRData.tributes : null,
+        available: dRData.available ? dRData.available : null,
+        description: dRData.description ? dRData.description : null,
+        skills: dRData.skills ? dRData.skills : null,
+        notes: dRData.notes ? dRData.notes : null,
       };
       data.push(obj);
     });
-    setHacksData(data);
+    setDeeperResearchData(data);
   };
 
-  const hacksColumns = [
-    { title: "Hacks", dataIndex: "hacks", key: "hacks" },
+  const deeperResearchColumns = [
+    {
+      title: "Deeper Research",
+      dataIndex: "deeperResearch",
+      key: "deeperResearch",
+    },
     { title: "Tributes", dataIndex: "tributes", key: "tributes" },
     { title: "Available", dataIndex: "available", key: "available" },
     {
@@ -50,11 +54,11 @@ function HacksTable() {
 
   return (
     <div className="Table__Container">
-      <h1>Hacks</h1>
+      <h1>Deeper Research</h1>
       <h3>Click the {<PlusCircleOutlined />} for more information</h3>
       <Table
         pagination={{ pageSize: 5 }}
-        columns={hacksColumns}
+        columns={deeperResearchColumns}
         expandable={{
           expandedRowRender: (record) => (
             <>
@@ -80,10 +84,10 @@ function HacksTable() {
             ),
           rowExpandable: (record) => record.builds !== "Not Expandable",
         }}
-        dataSource={hacksData}
+        dataSource={deeperResearchData}
       />
     </div>
   );
 }
 
-export default HacksTable;
+export default DeeperResearchTable;
