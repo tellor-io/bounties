@@ -12,13 +12,13 @@ import dataHacks from "./data/hacks.json";
 import Header from "./components/Header.js";
 import Welcome from "./components/Welcome.js";
 import BuildsTable from "./components/BuildsTable";
+import HacksTable from "./components/HacksTable";
 import Footer from "./components/Footer.js";
 
 const App = () => {
   const [bountiesData, setBountiesData] = useState();
   const [contentData, setContentData] = useState();
   const [deeperResearchData, setDeeperReseachData] = useState();
-  const [hacksData, setHacksData] = useState();
 
   //Commented out for now to not make unnecessary api calls during development
   // useEffect(() => {
@@ -54,21 +54,12 @@ const App = () => {
   //       setBountiesData(result.deeperResearch);
   //     });
 
-  //   const hacksUrl =
-  //     "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/hacks";
-  //   fetch(hacksUrl)
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       setBountiesData(result.hacks);
-  //     });
-
   // }, []);
 
   useEffect(() => {
     setBountiesData(dataBounties.bounties);
     setContentData(dataContent.content);
     setDeeperReseachData(dataDeeperResearch.deeperResearch);
-    setHacksData(dataHacks.hacks);
   }, []);
 
   return (
@@ -77,6 +68,7 @@ const App = () => {
         <Header />
         <Welcome />
         <BuildsTable />
+        <HacksTable />
         {/*
         {contentData &&
           contentData.map((data) => {

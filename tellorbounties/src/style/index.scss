@@ -208,7 +208,7 @@ h6 {
 }
 
 //Styles for BuildsTable.js
-.Builds__Container {
+.Table__Container {
   @include leftcolumn();
   padding: 2% 2% 0 2%;
   border: 2px solid $tellor-grey2;

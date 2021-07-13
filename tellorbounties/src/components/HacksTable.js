@@ -1,43 +1,43 @@
 import React, { useState, useEffect } from "react";
 //Data imports
-import dataBuilds from "../data/builds.json";
+import dataHacks from "../data/hacks.json";
 //Ant Design
 import { Button, Table } from "antd";
 import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
 
-function BuildsTable() {
-  const [buildsData, setBuildsData] = useState();
+function HacksTable() {
+  const [hacksData, setHacksData] = useState();
 
   useEffect(() => {
     // Commented out for development phase
-    //   const buildsUrl = "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/builds";
-    //   fetch(buildsUrl)
+    //   const hacksUrl = "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/hacks";
+    //   fetch(hacksUrl)
     //     .then((response) => response.json())
     //     .then((result) => {
-    //       dataHelper(result.builds);
+    //       setBountiesData(result.hacks);
     //     });
-    dataHelper(dataBuilds.builds);
+    dataHelper(dataHacks.hacks);
   }, []);
 
   const dataHelper = (unformattedData) => {
     let data = [];
-    unformattedData.forEach((bdata) => {
+    unformattedData.forEach((hdata) => {
       let obj = {
-        key: bdata.id,
-        builds: bdata.builds ? bdata.builds : null,
-        tributes: bdata.tributes ? bdata.tributes : null,
-        available: bdata.available ? bdata.available : null,
-        description: bdata.description ? bdata.description : null,
-        skills: bdata.skills ? bdata.skills : null,
-        notes: bdata.notes ? bdata.notes : null,
+        key: hdata.id,
+        hacks: hdata.hacks ? hdata.hacks : null,
+        tributes: hdata.tributes ? hdata.tributes : null,
+        available: hdata.available ? hdata.available : null,
+        description: hdata.description ? hdata.description : null,
+        skills: hdata.skills ? hdata.skills : null,
+        notes: hdata.notes ? hdata.notes : null,
       };
       data.push(obj);
     });
-    setBuildsData(data);
+    setHacksData(data);
   };
 
-  const buildsColumns = [
-    { title: "Builds", dataIndex: "builds", key: "builds" },
+  const hacksColumns = [
+    { title: "Hacks", dataIndex: "hacks", key: "hacks" },
     { title: "Tributes", dataIndex: "tributes", key: "tributes" },
     { title: "Available", dataIndex: "available", key: "available" },
     {
@@ -50,16 +50,16 @@ function BuildsTable() {
 
   return (
     <div className="Table__Container">
-      <h1>Builds</h1>
+      <h1>Hacks</h1>
       <h3>Click the {<PlusCircleOutlined />} for more information</h3>
       <Table
         pagination={{ pageSize: 5 }}
-        columns={buildsColumns}
+        columns={hacksColumns}
         expandable={{
           expandedRowRender: (record) => (
             <>
               <p style={{ margin: 0 }}>
-                Build Description:{" "}
+                Hack Description:{" "}
                 {record.description ? record.description : "N/A"}
               </p>
               <p style={{ margin: 0 }}>
@@ -81,10 +81,10 @@ function BuildsTable() {
             ),
           rowExpandable: (record) => record.builds !== "Not Expandable",
         }}
-        dataSource={buildsData}
+        dataSource={hacksData}
       />
     </div>
   );
 }
 
-export default BuildsTable;
+export default HacksTable;
