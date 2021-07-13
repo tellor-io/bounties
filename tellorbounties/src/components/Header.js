@@ -17,7 +17,7 @@ function Header() {
     //   fetch(tellorBountiesAvailableUrl)
     //     .then((response) => response.json())
     //     .then((result) => {
-    //       setBountiesData(result.tellorBountiesAvailable);
+    //       setTellorBountiesAvailableData(result.tellorBountiesAvailable);
     //     });
     setTellorBountiesAvailableData(
       dataTellorBountiesAvailable.tellorBountiesAvailable
