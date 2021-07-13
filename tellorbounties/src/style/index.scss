@@ -157,7 +157,7 @@ h6 {
   margin: 0 auto;
   margin-top: 3%;
 }
-
+// Styles for Header.js
 .Header {
   display: flex;
   flex-direction: row;
@@ -170,7 +170,6 @@ h6 {
 .Available__Bounties {
   @include centeredrow();
   color: $darkestgrey;
-
   div {
     margin-right: 20px;
   }
@@ -186,6 +185,8 @@ h6 {
 .Welcome__Message {
   margin: 0 auto;
   padding: 20px;
+  letter-spacing: 1.2px;
+  text-shadow: 5px 5px 50px $darkestgrey;
 }
 .Welcome__Rows {
   @include centeredrow();

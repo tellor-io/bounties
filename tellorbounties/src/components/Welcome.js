@@ -8,9 +8,9 @@ import Disclaimer from "../assets/warning.png";
 function Welcome() {
   return (
     <div className="Welcome">
-      <h2 className="Welcome__Message">
+      <h1 className="Welcome__Message">
         Welcome Tellor Developers and Bounty Hunters!
-      </h2>
+      </h1>
       <div className="Welcome__Rows">
         <img src={PositiveVote} alt="Thumbs up icon" />
         <h3>What this is.</h3>

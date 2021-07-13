@@ -5,15 +5,14 @@ import dataBuilds from "./data/builds.json";
 import dataContent from "./data/content.json";
 import dataDeeperResearch from "./data/deeperResearch.json";
 import dataHacks from "./data/hacks.json";
-import dataTellorBountiesAvailable from "./data/tellorBountiesAvailable.json";
-import { ReactComponent as TellorBounties } from "./assets/tellorbounties.svg";
 
 //Ant D
-import { Button, Table } from "antd";
+import { Table } from "antd";
 
 //Component Imports
+import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
-import Welcome from "./components/Welcome";
+import Welcome from "./components/Welcome.js";
 
 const App = () => {
   const [bountiesData, setBountiesData] = useState();
@@ -21,8 +20,6 @@ const App = () => {
   const [contentData, setContentData] = useState();
   const [deeperResearchData, setDeeperReseachData] = useState();
   const [hacksData, setHacksData] = useState();
-  const [tellorBountiesAvailableData, setTellorBountiesAvailableData] =
-    useState();
 
   const columns = [
     { title: "Builds", dataIndex: "builds", key: "builds" },
@@ -60,7 +57,7 @@ const App = () => {
       builds: "Tellor Miner Documentation",
       tributes: 250,
       available: "yes",
-      description: "Work on Tellor miner documentation (red the docs)",
+      description: "Work on Tellor miner documentation (read the docs)",
       skills: null,
       notes: null,
     },
@@ -136,13 +133,6 @@ const App = () => {
   //       setBountiesData(result.hacks);
   //     });
 
-  //   const tellorBountiesAvailableUrl =
-  //     "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/tellorBountiesAvailable";
-  //   fetch(tellorBountiesAvailableUrl)
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       setBountiesData(result.tellorBountiesAvailable);
-  //     });
   // }, []);
 
   useEffect(() => {
@@ -151,30 +141,14 @@ const App = () => {
     setContentData(dataContent.content);
     setDeeperReseachData(dataDeeperResearch.deeperResearch);
     setHacksData(dataHacks.hacks);
-    setTellorBountiesAvailableData(
-      dataTellorBountiesAvailable.tellorBountiesAvailable
-    );
+
     // dataHelper();
   }, []);
 
   return (
     <div className="App">
       <div className="App__Container">
-        <div className="Header">
-          <TellorBounties />
-          {tellorBountiesAvailableData &&
-            tellorBountiesAvailableData.map((data) => {
-              return (
-                <div className="Available__Bounties" key={data.id}>
-                  <div>
-                    <h2>Tellor Bounties Available</h2>
-                    <h4>{data.description}</h4>
-                  </div>
-                  <Button>{data.tellorBountiesAvailable}</Button>
-                </div>
-              );
-            })}
-        </div>
+        <Header />
         <Welcome />
         <Table
           columns={columns}
@@ -184,8 +158,12 @@ const App = () => {
                 <p style={{ margin: 0 }}>
                   Build Description: {record.description}
                 </p>
-                <p style={{ margin: 0 }}>Necessary Skill(s): {record.skills}</p>
-                <p style={{ margin: 0 }}>Notes: {record.notes}</p>
+                <p style={{ margin: 0 }}>
+                  Necessary Skill(s): {record.skills ? record.skills : "N/A"}
+                </p>
+                <p style={{ margin: 0 }}>
+                  Notes: {record.notes ? record.notes : "N/A"}
+                </p>
               </>
             ),
             rowExpandable: (record) => record.builds !== "Not Expandable",
