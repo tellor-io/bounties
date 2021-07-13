@@ -24,7 +24,7 @@ function DeeperResearchTable() {
     unformattedData.forEach((dRData) => {
       let obj = {
         key: dRData.id,
-        builds: dRData.deeperResearch ? dRData.deeperResearch : null,
+        deeperResearch: dRData.deeperResearch ? dRData.deeperResearch : null,
         tributes: dRData.tributes ? dRData.tributes : null,
         available: dRData.available ? dRData.available : null,
         description: dRData.description ? dRData.description : null,
