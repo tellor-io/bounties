@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as TellorLogoWhite } from "../assets/tellor_white.svg";
+import { ReactComponent as TellorLogoWhite } from "../assets/tellorbounties_white.svg";
 import { ReactComponent as Swoosh } from "../assets/Swoosh.svg";
 
 const Footer = () => {

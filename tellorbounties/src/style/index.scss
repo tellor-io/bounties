@@ -155,7 +155,25 @@ h6 {
   @include centeredcolumn();
   width: 92%;
   margin: 0 auto;
-  margin-top: 2%;
+  margin-top: 3%;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.Available__Bounties {
+  @include centeredrow();
+  color: $darkestgrey;
+
+  div {
+    margin-right: 20px;
+  }
 }
 
 //Styles for Welcome.js
@@ -183,132 +201,9 @@ h6 {
     flex: 0.1;
   }
   p {
-    @include fourteenpxfont();
+    @include sixteenpxfont();
     font-weight: 300;
     flex: 0.85;
-  }
-}
-
-.Header {
-  @include centeredrow;
-  box-sizing: border-box;
-  padding: 50px;
-  width: 100vw;
-
-  @media (max-width: 965px) {
-    align-items: flex-start;
-    padding: 28px 30px 28px 30px;
-  }
-
-  .BrandLink {
-    @media (max-width: 965px) {
-      margin: 3px 0 0 0;
-
-      .ant-btn {
-        padding: 0;
-        height: 16px;
-      }
-    }
-
-    a {
-      color: $darkestgrey;
-      font-size: 21px;
-      font-weight: 300;
-      margin-bottom: -11px;
-      font-weight: 500;
-
-      svg {
-        width: 216px;
-      }
-
-      @media (max-width: 965px) {
-        svg {
-          width: 143px;
-        }
-      }
-    }
-  }
-
-  &__Nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-
-    .gotAddress,
-    .gotAddress:hover,
-    .gotAddress:focus,
-    .gotAddress:active {
-      @include leftrow;
-      @include sixteenpxfont;
-      font-weight: bold;
-      color: $darkestgrey;
-      border: 1px solid rgba(#555555, 1);
-      height: 50px;
-      box-sizing: border-box;
-      padding: 16px 40px 16px 40px;
-      border-radius: 25px;
-
-      @media (max-width: 965px) {
-        @include fourteenpxfont;
-        height: 40px;
-        padding: 12px 30px 12px 30px;
-      }
-    }
-
-    .gotAddress_wCount,
-    .gotAddress_wCount:hover,
-    .gotAddress_wCount:focus,
-    .gotAddress_wCount:active {
-      @include leftrow;
-      @include sixteenpxfont;
-      font-weight: bold;
-      color: $darkestgrey;
-      border: 1px solid rgba(#555555, 1);
-      height: 50px;
-      box-sizing: border-box;
-      padding: 16px 12px 16px 32px;
-      border-radius: 25px;
-
-      @media (max-width: 965px) {
-        @include fourteenpxfont;
-        height: 40px;
-        padding: 12px 8px 12px 16px;
-      }
-    }
-
-    .activeDisputesCount {
-      @include leftrow;
-      justify-content: center;
-      background: $tellor-green;
-      width: 28px;
-      height: 28px;
-      border-radius: 14px;
-      margin: 0 0 0 18px;
-      padding: 2px 8px;
-      text-align: center;
-
-      @media (max-width: 965px) {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        margin: 0 0 0 10px;
-      }
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .dropper {
-      @include leftrow;
-      @include fourteenpxfont;
-      font-weight: normal;
-      width: 100%;
-      padding: 0 !important;
-      height: 45px;
-      border-radius: 0px !important;
-      margin: 0;
-    }
   }
 }
 
@@ -1961,6 +1856,7 @@ h6 {
   svg:nth-child(2) {
     height: 55px;
     margin: 6px 0 0 0;
+    margin-left: -14px;
   }
 }
 
