@@ -3,7 +3,7 @@ import PositiveVote from "../assets/positive-vote.png";
 import NegativeVote from "../assets/negative-vote.png";
 import Thinking from "../assets/thinking.png";
 import Contact from "../assets/communicate.png";
-import Disclaimer from "../assets/warning.png";
+import Disclaimer from "../assets/alert.png";
 
 function Welcome() {
   return (

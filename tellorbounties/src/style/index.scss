@@ -198,12 +198,12 @@ h6 {
   h3 {
     font-weight: 600;
     margin: 0% 3%;
-    flex: 0.1;
+    flex: 0.15;
   }
   p {
     @include sixteenpxfont();
     font-weight: 300;
-    flex: 0.85;
+    flex: 0.8;
   }
 }
 
