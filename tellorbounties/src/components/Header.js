@@ -65,7 +65,7 @@ function Header() {
       <Button id="openModalButton" onClick={openModal}>
         Ground Rules
       </Button>
-      <div id="Modal" className="Modal">
+      <div id="Modal" className="Modal fadeIn fadeOut">
         <Welcome closeModal={closeModal} />
       </div>
     </div>

@@ -119,8 +119,8 @@ h6 {
 }
 
 /* general classes */
-.fader {
-  animation: 1s ease-out fadeIn infinite;
+.fadeIn {
+  animation: 1s ease-in fadeIn;
 }
 
 .flexer {
