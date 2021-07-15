@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 //Design imports
-import { ReactComponent as TellorBounties } from "../assets/tellorbounties.svg";
+import { ReactComponent as TellorBounties } from "../assets/tellorbounties_renogare.svg";
 import { Button } from "antd";
 //Data imports
 import dataTellorBountiesAvailable from "../data/tellorBountiesAvailable.json";

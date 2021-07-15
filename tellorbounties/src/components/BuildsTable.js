@@ -10,12 +10,13 @@ function BuildsTable() {
 
   useEffect(() => {
     // Commented out for development phase
-    //   const buildsUrl = "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/builds";
-    //   fetch(buildsUrl)
-    //     .then((response) => response.json())
-    //     .then((result) => {
-    //       dataHelper(result.builds);
-    //     });
+    // const buildsUrl =
+    //   "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/builds";
+    // fetch(buildsUrl)
+    //   .then((response) => response.json())
+    //   .then((result) => {
+    //     dataHelper(result.builds);
+    //   });
     dataHelper(dataBuilds.builds);
   }, []);
 
