@@ -4,6 +4,8 @@ import { ReactComponent as TellorBounties } from "../assets/tellorbounties_renog
 import { Button } from "antd";
 //Data imports
 import dataTellorBountiesAvailable from "../data/tellorBountiesAvailable.json";
+//Component imports
+import Welcome from "./Welcome.js";
 
 function Header() {
   const [tellorBountiesAvailableData, setTellorBountiesAvailableData] =
@@ -22,7 +24,27 @@ function Header() {
     setTellorBountiesAvailableData(
       dataTellorBountiesAvailable.tellorBountiesAvailable
     );
+    setTimeout(() => {
+      const modal = document.getElementById("Modal");
+      modal.style.display = "block";
+    }, 2000);
   }, []);
+
+  //Modal Open/Close Functions
+  const openModal = () => {
+    const modal = document.getElementById("Modal");
+    modal.style.display = "block";
+  };
+  const closeModal = () => {
+    const modal = document.getElementById("Modal");
+    modal.style.display = "none";
+  };
+  window.onclick = (event) => {
+    const modal = document.getElementById("Modal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
 
   return (
     <div className="Header">
@@ -31,14 +53,18 @@ function Header() {
         tellorBountiesAvailableData.map((data) => {
           return (
             <div className="Available__Bounties" key={data.id}>
-              <div>
-                <h2>Tellor Bounties Available</h2>
-                <h4>{data.description}</h4>
-              </div>
+              <h2>Tellor Bounties Available</h2>
               <Button>{data.tellorBountiesAvailable}</Button>
+              <h4>{data.description}</h4>
             </div>
           );
         })}
+      <Button id="openModalButton" onClick={openModal}>
+        Ground Rules
+      </Button>
+      <div id="Modal" className="Modal">
+        <Welcome closeModal={closeModal} />
+      </div>
     </div>
   );
 }

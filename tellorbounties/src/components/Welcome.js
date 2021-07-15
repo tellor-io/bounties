@@ -1,16 +1,20 @@
 import React from "react";
+//Icons imports
 import PositiveVote from "../assets/positive-vote.png";
 import NegativeVote from "../assets/negative-vote.png";
 import Thinking from "../assets/thinking.png";
 import Contact from "../assets/communicate.png";
 import Disclaimer from "../assets/alert.png";
 
-function Welcome() {
+function Welcome({ closeModal }) {
   return (
     <div className="Welcome">
-      <h1 className="Welcome__Message">
-        Welcome Tellor Developers and Bounty Hunters!
-      </h1>
+      <div className="Welcome__Header">
+        <h1 className="Welcome__Message">
+          Welcome Tellor Developers and Bounty Hunters!
+        </h1>
+        <span onClick={closeModal}>&times;</span>
+      </div>
       <div className="Welcome__Rows">
         <img src={PositiveVote} alt="Thumbs up icon" />
         <h3>What this is.</h3>
@@ -66,9 +70,8 @@ function Welcome() {
         <img src={Disclaimer} alt="Disclaimer icon" />
         <h3>Disclaimer!</h3>
         <p>
-          This is crypto...no promises or guarantees in any way.
-          <br />
-          Rewards are subject to change given price changes.
+          This is crypto...no promises or guarantees in any way. Rewards are
+          subject to change given price changes.
         </p>
       </div>
     </div>
