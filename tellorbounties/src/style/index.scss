@@ -163,7 +163,7 @@ h6 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 103%;
+  width: 102%;
   margin-bottom: 3%;
 }
 #openModalButton {
@@ -248,26 +248,6 @@ h6 {
     font-weight: 300;
     flex: 0.8;
   }
-}
-
-//Styles for Table Components
-.Table__Container__Top {
-  @include leftcolumn();
-  padding: 2% 2% 0 2%;
-  border: 2px solid $tellor-grey2;
-  margin: 5% 0 2% 0;
-}
-.Table__Container__Middle {
-  @include leftcolumn();
-  padding: 2% 2% 0 2%;
-  border: 2px solid $tellor-grey2;
-  margin: 3% 0 2% 0;
-}
-.Table__Container__Bottom {
-  @include leftcolumn();
-  padding: 2% 2% 0 2%;
-  border: 2px solid $tellor-grey2;
-  margin: 3% 0 5% 0;
 }
 
 //Styles for Footer.js
@@ -442,6 +422,7 @@ h6 {
   display: flex;
   justify-content: space-evenly;
   font-weight: 300;
+  margin: 0 2% 2% 0;
 }
 .ant-table {
   @include eighteenpxfont();
@@ -469,16 +450,19 @@ h6 {
 .ant-table-row-expand-icon-cell {
   width: 50px !important;
 }
-
-.ant-pagination {
-  width: auto;
+.ant-table-column-sorters {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
-.ant-pagination-prev {
-  padding: 0 2%;
+.ant-table-column-sorter-inner {
+  display: flex;
+  flex-direction: column;
 }
-.ant-pagination-item {
-  padding-right: 2%;
+.anticon svg {
+  font-size: 14px;
+  color: $darkestgrey;
+}
+.ant-tooltip {
+  display: flex;
+  text-align: center;
 }

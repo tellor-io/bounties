@@ -21,9 +21,12 @@ function Header() {
     //     .then((result) => {
     //       setTellorBountiesAvailableData(result.tellorBountiesAvailable);
     //     });
+
     setTellorBountiesAvailableData(
       dataTellorBountiesAvailable.tellorBountiesAvailable
     );
+
+    //Modal Pop-Up after 2 seconds
     setTimeout(() => {
       const modal = document.getElementById("Modal");
       modal.style.display = "block";
