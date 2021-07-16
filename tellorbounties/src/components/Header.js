@@ -29,8 +29,13 @@ function Header() {
     //Modal Pop-Up after 2 seconds
     setTimeout(() => {
       const modal = document.getElementById("Modal");
+      modal.classList.add("fadeIn");
       modal.style.display = "block";
     }, 2000);
+    setTimeout(() => {
+      const modal = document.getElementById("Modal");
+      modal.classList.remove("fadeIn");
+    }, 5000);
   }, []);
 
   //Modal Open/Close Functions
@@ -65,7 +70,7 @@ function Header() {
       <Button id="openModalButton" onClick={openModal}>
         Ground Rules
       </Button>
-      <div id="Modal" className="Modal fadeIn fadeOut">
+      <div id="Modal" className="Modal">
         <Welcome closeModal={closeModal} />
       </div>
     </div>

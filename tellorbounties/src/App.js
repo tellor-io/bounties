@@ -47,35 +47,10 @@ const App = () => {
     {
       title: "Job Title",
       dataIndex: "title",
-      defaultSortOrder: "descend ascend descend",
-      sorter: (a, b) => a.title - b.title,
     },
     {
       title: "Job Type",
       dataIndex: "jobType",
-      filters: [
-        {
-          text: "Builds",
-          value: "Builds",
-        },
-        {
-          text: "Hacks",
-          value: "Hacks",
-        },
-        {
-          text: "Deeper Research",
-          value: "Deeper Research",
-        },
-        {
-          text: "Content",
-          value: "Content",
-        },
-      ],
-      // specify the condition of filtering result
-      // here is that finding the name started with `value`
-      onFilter: (value, record) => record.jobType.indexOf(value) === 0,
-      sorter: (a, b) => a.jobType.length - b.jobType.length,
-      sortDirections: ["descend"],
     },
     {
       title: "Tributes",
@@ -86,18 +61,18 @@ const App = () => {
     {
       title: "Available",
       dataIndex: "available",
-      defaultSortOrder: "descend",
-      sorter: (a, b) => a.available - b.available,
     },
     {
       title: "Action",
       dataIndex: "",
       key: "x",
-      render: () => <Button>Claim</Button>,
+      render: () => (
+        <a href="mailto:nfett@tellor.io">
+          <Button>Claim</Button>
+        </a>
+      ),
     },
   ];
-
-  console.log(bountiesData);
 
   return (
     <div className="App">

@@ -123,18 +123,6 @@ h6 {
   animation: 1s ease-in fadeIn;
 }
 
-.flexer {
-  flex: 1;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.green {
-  color: $tellor-green;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -147,9 +135,6 @@ h6 {
   }
 }
 
-// Specific Elements
-
-// Joshua Samaniego
 // Styles for App.js
 .App__Container {
   @include centeredcolumn();
@@ -185,7 +170,6 @@ h6 {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 .Available__Bounties {
   @include centeredcolumn();
   color: $darkestgrey;
@@ -304,7 +288,6 @@ h6 {
   }
 }
 
-/* Joshua Samaniego */
 .Left__Column {
   svg:nth-child(1) {
     width: 57px;
@@ -314,62 +297,6 @@ h6 {
     height: 55px;
     margin: 6px 0 0 0;
     margin-left: -14px;
-  }
-}
-
-@keyframes circleanim {
-  0% {
-    stroke-dashoffset: 250;
-  }
-
-  50% {
-    stroke-dashoffset: 0;
-  }
-
-  100% {
-    stroke-dashoffset: -250;
-  }
-}
-
-@keyframes loaderanim {
-  0% {
-    stroke-dashoffset: 84;
-  }
-
-  50% {
-    stroke-dashoffset: 0;
-  }
-
-  100% {
-    stroke-dashoffset: -84;
-  }
-}
-
-@keyframes loadinganim {
-  0% {
-    stroke-dashoffset: -8;
-  }
-
-  50% {
-    stroke-dashoffset: 0;
-  }
-
-  100% {
-    stroke-dashoffset: 8;
-  }
-}
-
-@keyframes connectedanim {
-  0% {
-    stroke-dashoffset: -4;
-  }
-
-  50% {
-    stroke-dashoffset: 0;
-  }
-
-  100% {
-    stroke-dashoffset: 4;
   }
 }
 
@@ -463,6 +390,5 @@ h6 {
   color: $darkestgrey;
 }
 .ant-tooltip {
-  display: flex;
-  text-align: center;
+  display: none;
 }
