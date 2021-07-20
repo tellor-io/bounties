@@ -35,7 +35,7 @@ function Header() {
     setTimeout(() => {
       const modal = document.getElementById("Modal");
       modal.classList.remove("fadeIn");
-    }, 5000);
+    }, 4000);
   }, []);
 
   //Modal Open/Close Functions
@@ -46,12 +46,6 @@ function Header() {
   const closeModal = () => {
     const modal = document.getElementById("Modal");
     modal.style.display = "none";
-  };
-  window.onclick = (event) => {
-    const modal = document.getElementById("Modal");
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
   };
 
   return (

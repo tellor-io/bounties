@@ -7,6 +7,7 @@ import dataBounties from "./data/bountiesData.json";
 //Component Imports
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
+import ClaimModal from "./components/ClaimModal";
 
 const App = () => {
   const [bountiesData, setBountiesData] = useState();
@@ -67,12 +68,32 @@ const App = () => {
       dataIndex: "",
       key: "x",
       render: () => (
-        <a href="mailto:nfett@tellor.io">
-          <Button>Claim</Button>
-        </a>
+        <Button id="claimModalButton" onClick={openClaimModal}>
+          Claim
+        </Button>
       ),
     },
   ];
+
+  //Claim Modal Functions
+  const openClaimModal = () => {
+    const claimModal = document.getElementById("claimModal");
+    claimModal.style.display = "block";
+  };
+  const closeClaimModal = () => {
+    const claimModal = document.getElementById("claimModal");
+    claimModal.style.display = "none";
+  };
+  //Window function to help close modals
+  window.onclick = (event) => {
+    const claimModal = document.getElementById("claimModal");
+    const modal = document.getElementById("Modal");
+    if (event.target === claimModal) {
+      claimModal.style.display = "none";
+    } else if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
 
   return (
     <div className="App">
@@ -108,6 +129,9 @@ const App = () => {
           }}
           dataSource={bountiesData}
         />
+      </div>
+      <div id="claimModal" className="Claim__Modal">
+        <ClaimModal closeClaimModal={closeClaimModal} />
       </div>
       <Footer />
     </div>
