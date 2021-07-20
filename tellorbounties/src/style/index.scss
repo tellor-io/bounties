@@ -270,6 +270,7 @@ h6 {
 .Claim__Header {
   display: flex;
   justify-content: space-between;
+  margin-top: 2%;
   span {
     font-size: 30px;
     color: $darkestgrey;
@@ -281,6 +282,86 @@ h6 {
       text-decoration: none;
     }
   }
+}
+
+.Claim__Form {
+  @include centeredcolumn();
+  padding: 2%;
+  width: 100%;
+  font-family: "Roboto";
+  &::placeholder {
+    font-family: "Roboto";
+  }
+}
+.CF__Job {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.CF__Input__Container {
+  label {
+    margin-right: 1%;
+  }
+  input {
+    width: 245px;
+    height: 42px;
+    box-shadow: inset -1px 1px 2px rgba(204, 204, 204, 0.2),
+      inset 1px -1px 2px rgba(204, 204, 204, 0.2),
+      inset -1px -1px 2px rgba(255, 255, 255, 0.9),
+      inset 1px 1px 3px rgba(204, 204, 204, 0.9);
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.CF__Double__Container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1% 0;
+}
+.CF__Long__Input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0 1.5%;
+
+  input {
+    width: 90%;
+    height: 42px;
+    box-shadow: inset -1px 1px 2px rgba(204, 204, 204, 0.2),
+      inset 1px -1px 2px rgba(204, 204, 204, 0.2),
+      inset -1px -1px 2px rgba(255, 255, 255, 0.9),
+      inset 1px 1px 3px rgba(204, 204, 204, 0.9);
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  textarea {
+    width: 90%;
+    height: 100px;
+    box-shadow: inset -1px 1px 2px rgba(204, 204, 204, 0.2),
+      inset 1px -1px 2px rgba(204, 204, 204, 0.2),
+      inset -1px -1px 2px rgba(255, 255, 255, 0.9),
+      inset 1px 1px 3px rgba(204, 204, 204, 0.9);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Roboto";
+  }
+}
+.Claim__Button {
+  margin: 2% 0;
 }
 
 //Styles for Footer.js

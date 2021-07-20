@@ -9,8 +9,14 @@ import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import ClaimModal from "./components/ClaimModal";
 
+let initialJobForm = {
+  jobTitle: "",
+  jobType: "",
+};
+
 const App = () => {
   const [bountiesData, setBountiesData] = useState();
+  const [jobForm, setJobForm] = useState(initialJobForm);
 
   useEffect(() => {
     // Commented out for development phase
@@ -102,6 +108,16 @@ const App = () => {
         <Table
           pagination={false}
           columns={columns}
+          onRow={(record) => {
+            return {
+              onClick: () => {
+                setJobForm({
+                  jobTitle: record.title,
+                  jobType: record.jobType,
+                });
+              },
+            };
+          }}
           expandable={{
             expandedRowRender: (record) => (
               <>
@@ -131,7 +147,7 @@ const App = () => {
         />
       </div>
       <div id="claimModal" className="Claim__Modal">
-        <ClaimModal closeClaimModal={closeClaimModal} />
+        <ClaimModal closeClaimModal={closeClaimModal} jobForm={jobForm} />
       </div>
       <Footer />
     </div>
