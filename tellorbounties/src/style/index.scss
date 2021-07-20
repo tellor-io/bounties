@@ -299,12 +299,21 @@ h6 {
   width: 100%;
   justify-content: space-between;
 }
+.CF__Double__Container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1% 0;
+}
 .CF__Input__Container {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
   label {
     margin-right: 1%;
   }
   input {
-    width: 245px;
+    width: 80%;
     height: 42px;
     box-shadow: inset -1px 1px 2px rgba(204, 204, 204, 0.2),
       inset 1px -1px 2px rgba(204, 204, 204, 0.2),
@@ -318,12 +327,6 @@ h6 {
       outline: none;
     }
   }
-}
-.CF__Double__Container {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1% 0;
 }
 .CF__Long__Input {
   width: 100%;
@@ -348,7 +351,7 @@ h6 {
     }
   }
   textarea {
-    width: 90%;
+    width: 89%;
     height: 100px;
     box-shadow: inset -1px 1px 2px rgba(204, 204, 204, 0.2),
       inset 1px -1px 2px rgba(204, 204, 204, 0.2),
