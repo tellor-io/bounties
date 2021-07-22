@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 //Design imports
 import { ReactComponent as TellorBounties } from "../assets/tellorbounties_renogare.svg";
 import { Button } from "antd";
-//Data imports
-import dataTellorBountiesAvailable from "../data/tellorBountiesAvailable.json";
 //Component imports
 import Welcome from "./Welcome.js";
 
@@ -11,20 +9,15 @@ function Header() {
   const [tellorBountiesAvailableData, setTellorBountiesAvailableData] =
     useState();
 
+  //useEffect to call the Sheety API to render proper amount of available Tellor Bounties
   useEffect(() => {
-    // Use for later when using the API again
-
-    //   const tellorBountiesAvailableUrl =
-    //     "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/tellorBountiesAvailable";
-    //   fetch(tellorBountiesAvailableUrl)
-    //     .then((response) => response.json())
-    //     .then((result) => {
-    //       setTellorBountiesAvailableData(result.tellorBountiesAvailable);
-    //     });
-
-    setTellorBountiesAvailableData(
-      dataTellorBountiesAvailable.tellorBountiesAvailable
-    );
+    const tellorBountiesAvailableUrl =
+      "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/tellorBountiesAvailable";
+    fetch(tellorBountiesAvailableUrl)
+      .then((response) => response.json())
+      .then((result) => {
+        setTellorBountiesAvailableData(result.tellorBountiesAvailable);
+      });
 
     //Modal Pop-Up after 2 seconds
     setTimeout(() => {

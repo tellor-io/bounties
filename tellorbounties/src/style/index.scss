@@ -283,7 +283,10 @@ h6 {
     }
   }
 }
-
+.CF__Error {
+  color: red;
+  text-align: center;
+}
 .Claim__Form {
   @include centeredcolumn();
   padding: 2%;
@@ -332,7 +335,6 @@ h6 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
   margin: 0 1.5%;
 
   input {
@@ -361,10 +363,20 @@ h6 {
     border-radius: 10px;
     padding: 10px;
     font-family: "Roboto";
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 .Claim__Button {
   margin: 2% 0;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
 }
 
 //Styles for Footer.js
@@ -433,7 +445,7 @@ h6 {
   }
 }
 
-// --- Ant Overrides ---
+// --- Ant D Overrides ---
 
 // Buttons
 .ant-btn {

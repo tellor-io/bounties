@@ -14,7 +14,8 @@
     "react-scripts": "4.0.3",
     "sass": "^1.35.2",
     "svg-react-loader": "^0.4.6",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",

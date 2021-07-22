@@ -2,36 +2,43 @@ import React, { useState, useEffect } from "react";
 //Ant D imports
 import { Button, Table } from "antd";
 import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
-//Data imports
-import dataBounties from "./data/bountiesData.json";
 //Component Imports
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import ClaimModal from "./components/ClaimModal";
 
-let initialJobForm = {
-  jobTitle: "",
-  jobType: "",
-};
-
 const App = () => {
+  let initialJobForm = {
+    jobTitle: "",
+    jobType: "",
+  };
+
   const [bountiesData, setBountiesData] = useState();
   const [jobForm, setJobForm] = useState(initialJobForm);
 
+  //useEffect to populate the table with data from the Sheety API
   useEffect(() => {
-    // Commented out for development phase
-    // const bountiesUrl =
-    //   "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/bounties";
-    // fetch(bountiesUrl)
-    //   .then((response) => response.json())
-    //   .then((result) => {
-    //     dataHelper(result.bounties);
-    //   });
-    dataHelper(dataBounties.bounties);
+    const bountiesUrl =
+      "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/bounties";
+    fetch(bountiesUrl)
+      .then((response) => response.json())
+      .then((result) => {
+        dataHelper(result.bounties);
+      });
   }, []);
 
+  //DataHelper function to get Sheety API data into proper form for the AntD Table
   const dataHelper = (unformattedData) => {
     let dataArray = [];
+    let randomBountyObj = {
+      key: 100,
+      title: "Suggest A Bounty",
+      jobType: "Various",
+      tributes: "Various",
+      available: "Yes",
+      description:
+        "Have a suggestion? After you claim this bounty, let us know about your idea on how to expand Tellor in the comments section!",
+    };
     unformattedData.forEach((data) => {
       let obj = {
         key: data.id,
@@ -43,13 +50,15 @@ const App = () => {
         skills: data.skills ? data.skills : null,
         notes: data.notes ? data.notes : null,
       };
-      if (obj.title) {
+      if (obj.title && obj.jobType) {
         dataArray.push(obj);
       }
     });
+    dataArray.push(randomBountyObj);
     setBountiesData(dataArray);
   };
 
+  //AntD Column Logic
   const columns = [
     {
       title: "Job Title",
@@ -60,7 +69,7 @@ const App = () => {
       dataIndex: "jobType",
     },
     {
-      title: "Tributes",
+      title: "Bounty",
       dataIndex: "tributes",
       defaultSortOrder: "descend",
       sorter: (a, b) => a.tributes - b.tributes,
@@ -81,14 +90,10 @@ const App = () => {
     },
   ];
 
-  //Claim Modal Functions
+  //Claim Modal Function
   const openClaimModal = () => {
     const claimModal = document.getElementById("claimModal");
     claimModal.style.display = "block";
-  };
-  const closeClaimModal = () => {
-    const claimModal = document.getElementById("claimModal");
-    claimModal.style.display = "none";
   };
   //Window function to help close modals
   window.onclick = (event) => {
@@ -147,7 +152,7 @@ const App = () => {
         />
       </div>
       <div id="claimModal" className="Claim__Modal">
-        <ClaimModal closeClaimModal={closeClaimModal} jobForm={jobForm} />
+        <ClaimModal jobForm={jobForm} />
       </div>
       <Footer />
     </div>
