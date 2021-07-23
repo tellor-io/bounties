@@ -12,11 +12,15 @@ function Header() {
   //useEffect to call the Sheety API to render proper amount of available Tellor Bounties
   useEffect(() => {
     const tellorBountiesAvailableUrl =
-      "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/tellorBountiesAvailable";
+      "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/bounties";
     fetch(tellorBountiesAvailableUrl)
       .then((response) => response.json())
       .then((result) => {
-        setTellorBountiesAvailableData(result.tellorBountiesAvailable);
+        result.bounties.forEach((bounty) => {
+          if (bounty.bountiesTitle === "Tellor Bounties Available") {
+            setTellorBountiesAvailableData(bounty);
+          }
+        });
       });
 
     //Modal Pop-Up after 2 seconds
@@ -44,16 +48,16 @@ function Header() {
   return (
     <div className="Header">
       <TellorBounties />
-      {tellorBountiesAvailableData &&
-        tellorBountiesAvailableData.map((data) => {
-          return (
-            <div className="Available__Bounties" key={data.id}>
-              <h2>Tellor Bounties Available</h2>
-              <Button>{data.tellorBountiesAvailable}</Button>
-              <h4>{data.description}</h4>
-            </div>
-          );
-        })}
+      <div className="Available__Bounties">
+        <h2>Tellor Bounties Available</h2>
+        <Button>
+          {tellorBountiesAvailableData && tellorBountiesAvailableData.tributes}
+        </Button>
+        <h4>
+          {tellorBountiesAvailableData &&
+            tellorBountiesAvailableData.description}
+        </h4>
+      </div>
       <Button id="openModalButton" onClick={openModal}>
         Ground Rules
       </Button>
