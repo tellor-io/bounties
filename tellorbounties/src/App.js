@@ -13,6 +13,7 @@ const App = () => {
     jobType: "",
   };
 
+  const [rawData, setRawData] = useState();
   const [bountiesData, setBountiesData] = useState();
   const [jobForm, setJobForm] = useState(initialJobForm);
 
@@ -23,6 +24,7 @@ const App = () => {
     fetch(bountiesUrl)
       .then((response) => response.json())
       .then((result) => {
+        setRawData(result.bounties);
         dataHelper(result.bounties);
       });
   }, []);
@@ -109,7 +111,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="App__Container">
-        <Header />
+        <Header rawData={rawData} />
         <Table
           pagination={false}
           columns={columns}

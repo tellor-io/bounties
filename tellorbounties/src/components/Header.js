@@ -5,22 +5,17 @@ import { Button } from "antd";
 //Component imports
 import Welcome from "./Welcome.js";
 
-function Header() {
+function Header({ rawData }) {
   const [tellorBountiesAvailableData, setTellorBountiesAvailableData] =
     useState();
 
   //useEffect to call the Sheety API to render proper amount of available Tellor Bounties
   useEffect(() => {
-    const tellorBountiesAvailableUrl =
-      "https://api.sheety.co/ed9240fc3b351479d6da738838e4133d/tellorBountiesProgram/bounties";
-    fetch(tellorBountiesAvailableUrl)
-      .then((response) => response.json())
-      .then((result) => {
-        result.bounties.forEach((bounty) => {
-          if (bounty.bountiesTitle === "Tellor Bounties Available") {
-            setTellorBountiesAvailableData(bounty);
-          }
-        });
+    rawData &&
+      rawData.forEach((bounty) => {
+        if (bounty.bountiesTitle === "Tellor Bounties Available") {
+          setTellorBountiesAvailableData(bounty);
+        }
       });
 
     //Modal Pop-Up after 2 seconds
@@ -33,7 +28,7 @@ function Header() {
       const modal = document.getElementById("Modal");
       modal.classList.remove("fadeIn");
     }, 4000);
-  }, []);
+  }, [rawData]);
 
   //Modal Open/Close Functions
   const openModal = () => {
